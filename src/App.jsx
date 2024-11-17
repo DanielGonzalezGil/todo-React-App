@@ -17,7 +17,8 @@ const todoList = [
 
 /* rendering the list */
 const renderList = todoList.map(function(listItem){
-  return <li key={listItem.id}>{listItem.title}</li>
+  // needed to add key={} so react can keep track of each list item
+  return <li key={listItem.id}>{listItem.title}</li> 
 });
 
 function App() {
