@@ -17,7 +17,7 @@ const todoList = [
 
 /* rendering the list */
 const renderList = todoList.map(function(listItem){
-  return <li>{listItem.id}: {listItem.title}</li>
+  return <li key={listItem.id}>{listItem.title}</li>
 });
 
 function App() {
