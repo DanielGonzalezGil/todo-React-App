@@ -1,33 +1,15 @@
 import './App.css'
+import TodoList from './TodoList'
+import AddTodoForm  from './AddTodoForm'; 
 
-const todoList = [
-  {
-    id:1,
-    title:"Walk Dogs"
-  },
-  {
-    id:2,
-    title:"Clean Room"
-  },
-  {
-    id:3,
-    title:"Take Trash Out"
-  },
-];
-
-/* rendering the list */
-const renderList = todoList.map(function(listItem){
-  return <li key={listItem.id}>{listItem.title}</li>
-});
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Todo List</h1>
-        <ul>{renderList}</ul>
-
-    </div>
+  <div className="App">
+    <h1>Todo List</h1>
+      <AddTodoForm />
+      <TodoList />
+  </div>
   );
-}
+};
 
 export default App
