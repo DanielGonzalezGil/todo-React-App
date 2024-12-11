@@ -1,25 +1,14 @@
-// Actual list
-const todoList = [
-    {
-    id:1,
-    title:"Walk Dogs"
-    },
-    {
-    id:2,
-    title:"Clean Room"
-    },
-    {
-    id:3,
-    title:"Take Trash Out"
-    },
-];
+import TodoListItem from './TodoListItem';
 
 // Todo list component
-const TodoList = () => <ul>{renderList}</ul>;
+const TodoList = (props) => 
+    <ul>{props.list.map(function(item){
+            return (<TodoListItem key={item.id} item={item} />); 
+            })}
+    </ul>;
 
-/* making the list */
-const renderList = todoList.map((listItem) => {
-    return <li key={listItem.id}>{listItem.title}</li>;
-});
+
+
+
 
 export default TodoList;
